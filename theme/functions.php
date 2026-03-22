@@ -17,14 +17,14 @@ function spp_enqueue_assets() {
 		'spp-custom',
 		get_theme_file_uri( 'assets/css/custom.css' ),
 		array(),
-		wp_get_theme()->get( 'Version' )
+		filemtime( get_theme_file_path( 'assets/css/custom.css' ) )
 	);
 
 	wp_enqueue_script(
 		'spp-navigation',
 		get_theme_file_uri( 'assets/js/navigation.js' ),
 		array(),
-		wp_get_theme()->get( 'Version' ),
+		filemtime( get_theme_file_path( 'assets/js/navigation.js' ) ),
 		array(
 			'in_footer' => true,
 			'strategy'  => 'defer',
@@ -35,7 +35,7 @@ function spp_enqueue_assets() {
 		'spp-animations',
 		get_theme_file_uri( 'assets/js/animations.js' ),
 		array(),
-		wp_get_theme()->get( 'Version' ),
+		filemtime( get_theme_file_path( 'assets/js/animations.js' ) ),
 		array(
 			'in_footer' => true,
 			'strategy'  => 'defer',
@@ -48,6 +48,7 @@ add_action( 'wp_enqueue_scripts', 'spp_enqueue_assets' );
  * Set up theme support and editor styles.
  */
 function spp_setup() {
+	add_theme_support( 'title-tag' );
 	add_editor_style( 'assets/css/editor.css' );
 	add_editor_style( 'assets/css/custom.css' );
 }
