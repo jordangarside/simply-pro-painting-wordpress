@@ -1,0 +1,96 @@
+/* Editor styles for Simply Pro Painting */
+
+/* Match frontend body styles */
+.editor-styles-wrapper {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    line-height: 1.7;
+    color: #0f172a;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #0f172a;
+}
+
+.editor-styles-wrapper p {
+    color: #475569;
+}
+
+/* PaintScout placeholder in editor */
+.editor-styles-wrapper #widget-container {
+    min-height: 200px;
+    background: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.editor-styles-wrapper #widget-container::after {
+    content: 'PaintScout Quote Form — preview not available in editor';
+    color: #94a3b8;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.875rem;
+}
+
+/* Section backgrounds in editor */
+.editor-styles-wrapper .hero,
+.editor-styles-wrapper .quote {
+    background-color: #fffbeb;
+}
+
+.editor-styles-wrapper .about {
+    background-color: #f0f9ff;
+}
+
+.editor-styles-wrapper .footer {
+    background-color: #0f172a;
+    color: #ffffff;
+}
+
+/* Section label in editor */
+.editor-styles-wrapper .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #f97316;
+}
+
+/* Reset WP group defaults inside homepage sections in editor */
+.editor-styles-wrapper .hero .wp-block-group,
+.editor-styles-wrapper .services .wp-block-group,
+.editor-styles-wrapper .about .wp-block-group,
+.editor-styles-wrapper .gallery .wp-block-group {
+    padding: 0;
+    margin: 0;
+}
+
+.editor-styles-wrapper .hero .wp-block-image,
+.editor-styles-wrapper .about .wp-block-image,
+.editor-styles-wrapper .gallery .wp-block-image {
+    margin: 0;
+}
+
+/* About image in editor */
+.editor-styles-wrapper .about-image img {
+    border-radius: 20px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 0 16px 48px rgba(15, 23, 42, 0.12);
+    border: 4px solid #ffffff;
+}
